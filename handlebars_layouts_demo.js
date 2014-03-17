@@ -3,7 +3,7 @@ var path = require('path');
 var Handlebars = require('handlebars');
 require('handlebars-layouts')(Handlebars);
 
-var handlebarsLoadTree = require('./lib/handlebars_load_tree');
+var handlebarsLoadTree = require('./index');
 
 var views = handlebarsLoadTree(Handlebars, path.join(__dirname, 'spec', 'fixtures'));
 
