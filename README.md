@@ -3,12 +3,12 @@
 The handlebars tree loader exposes one function which will walk a directory tree, recursively,
 compiling handlebars templates.
 
-Example:
+[*handlebars_demo.js*](https://github.com/nrstott/handlebars-load-tree/blob/master/handlebars_demo.js)
 
     var Handlebars = require('handlebars');
     var handlebarsLoadTree = require('handlebars-load-tree')(Handlebars);
 
-    var views = handlebarsLoadTree('./views');
+    var views = handlebarsLoadTree(__dirname, 'spec', 'fixtures');
 
     // Render the template at ./views/index.hbs
     views.index({
@@ -25,7 +25,7 @@ This plugin also works with handlebars-layouts as handlebars-layouts modified
 the Handlebars instance. Load handlebars-layouts normally and pass the modified
 Handlebars to `handlebarsLoadTree`.
 
-Example:
+[*handlebars_layouts_demo.js*](https://github.com/nrstott/handlebars-load-tree/blob/master/handlebars_layouts_demo.js)
 
     var path = require('path');
 
@@ -36,9 +36,21 @@ Example:
 
     var views = handlebarsLoadTree(Handlebars, path.join(__dirname, 'spec', 'fixtures'));
 
-    views.then(function (views) {
-      console.log(views.index({
-        title: 'Hello Title'
-      }));
-    });
+    var locals = {
+      title: 'Titles are Nice',
+      items: [
+        {
+          text: 'Buy Milk'
+        },
+        {
+          text: 'Pick up Prescription'
+        },
+        {
+          text: 'Read PDF'
+        }
+      ]
+    };
+
+    views.call('index', locals).then(console.log);
+
 
