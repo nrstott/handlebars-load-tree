@@ -1,0 +1,24 @@
+{
+  "name": "handlebars-load-tree",
+  "version": "0.0.0",
+  "description": "Load handlebars templates and partials from a directory, recursively.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node spec/"
+  },
+  "keywords": [
+    "handleabars",
+    "loader",
+    "directory"
+  ],
+  "author": "Nathan Stott <nrstott@gmail.com>",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "walkdir": "0.0.7",
+    "bluebird": "~1.1.0"
+  },
+  "devDependencies": {
+    "handlebars": "~2.0.0-alpha.2",
+    "handlebars-layouts": "~0.2.0"
+  }
+}
