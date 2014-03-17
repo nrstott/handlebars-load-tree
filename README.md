@@ -3,7 +3,7 @@
 The handlebars tree loader exposes one function which will walk a directory tree, recursively,
 compiling handlebars templates.
 
-[_handlebars_demo.js_](https://github.com/nrstott/handlebars-load-tree/blob/master/handlebars_demo.js)
+[**handlebars_demo.js**](https://github.com/nrstott/handlebars-load-tree/blob/master/handlebars_demo.js)
 
     var path = require('path');
 
@@ -35,7 +35,7 @@ This plugin also works with handlebars-layouts as handlebars-layouts modified
 the Handlebars instance. Load handlebars-layouts normally and pass the modified
 Handlebars to `handlebarsLoadTree`.
 
-[_handlebars_layouts_demo.js_](https://github.com/nrstott/handlebars-load-tree/blob/master/handlebars_layouts_demo.js)
+[**handlebars_layouts_demo.js**](https://github.com/nrstott/handlebars-load-tree/blob/master/handlebars_layouts_demo.js)
 
     var path = require('path');
 
