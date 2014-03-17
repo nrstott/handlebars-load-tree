@@ -8,7 +8,7 @@ compiling handlebars templates.
     var path = require('path');
 
     var Handlebars = require('handlebars');
-    var handlebarsLoadTree = require('./index');
+    var handlebarsLoadTree = require('handlebars-load-tree');
 
     var views = handlebarsLoadTree(Handlebars, path.join(__dirname, 'spec', 'fixtures'));
 
@@ -42,7 +42,7 @@ Handlebars to `handlebarsLoadTree`.
     var Handlebars = require('handlebars');
     require('handlebars-layouts')(Handlebars);
 
-    var handlebarsLoadTree = require('./lib/handlebars_load_tree');
+    var handlebarsLoadTree = require('handlebars-load-tree');
 
     var views = handlebarsLoadTree(Handlebars, path.join(__dirname, 'spec', 'fixtures'));
 
