@@ -29,11 +29,11 @@ describe('Handlebars Load Tree', function () {
   });
 
   it('should register layout', function () {
-    expect(Handlebars.registerPartial).toHaveBeenCalledWith('main', jasmine.any(Function));
+    expect(Handlebars.registerPartial).toHaveBeenCalledWith('layouts/main', jasmine.any(Function));
   });
 
   it('should register _list_item partial', function () {
-    expect(Handlebars.registerPartial).toHaveBeenCalledWith('list_item', jasmine.any(Function));
+    expect(Handlebars.registerPartial).toHaveBeenCalledWith('person/list_item', jasmine.any(Function));
   });
 
   it('shoud have person.list', function () {
