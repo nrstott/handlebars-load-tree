@@ -1,6 +1,6 @@
 {
   "name": "handlebars-load-tree",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Load handlebars templates and partials from a directory, recursively.",
   "main": "index.js",
   "scripts": {
